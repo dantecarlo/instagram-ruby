@@ -3,12 +3,9 @@
   <head>
     <title>Instuigram</title>
     <%= csrf_meta_tags %>
-
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <!--Navigation Bar-->
     <nav class="navbar navbar-light bg-light d-flex">
@@ -26,9 +23,9 @@
         </div>
         <div class="user-section">
           <% if user_signed_in? %>
-             <a href="<%= user_path(current_user)%>”>
-              <i class="fa fa-user”></i>
-             </a>
+            <a href="<%= user_path(current_user)%>">
+              <i class="fa fa-user"></i>
+            </a>
           <% else %>
             <a href="<%= new_user_session_path%>">
               <i class="fa fa-sign-in"></i>
@@ -37,12 +34,10 @@
         </div>
       </div>
     </nav>
-
     <!--Main content-->
     <main class="container" style="min-height: 500px;">
       <%= yield %>
     </main>
-
     <!--Footer-->
     <footer class="container footer">
       <nav class="navbar d-flex">

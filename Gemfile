@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.3'
 
 gem 'pg'
 
-gem 'bootstrap' , '~> 4.1.1'
+gem "bootstrap", ">= 4.3.1"
 
 gem 'jquery-rails'
 
