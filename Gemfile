@@ -16,6 +16,8 @@ gem 'font-awesome-rails'
 
 gem 'devise'
 
+gem 'kaminari'
+
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
