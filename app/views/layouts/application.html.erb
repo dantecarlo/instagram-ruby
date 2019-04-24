@@ -1,29 +1,30 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>Instuigram</title>
     <%= csrf_meta_tags %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
     <!--Navigation Bar-->
     <nav class="navbar navbar-light bg-light d-flex">
       <div class="container">
         <div class="logo">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <%= fa_stacked_icon "camera inverse", base: "circle"%>
-            Instagram
+            Instuigram
           </a>
         </div>
         <div class="m-auto">
-          <form class="form-inline search-form">
-            <input class="form-control mr-sm-2" type="search" placeholder="@search" aria-label="Search">
-          </form>
+          
         </div>
         <div class="user-section">
+          <a><i class="fa fa-compass"></i></a>
+          <a><i class="fa fa-heart"></i></a>
           <% if user_signed_in? %>
-            <a href="<%= user_path(current_user)%>">
+            <a href="<%= user_path(current_user)%>" data-method="delete">
               <i class="fa fa-user"></i>
             </a>
           <% else %>
@@ -34,29 +35,33 @@
         </div>
       </div>
     </nav>
+
     <!--Main content-->
     <main class="container" style="min-height: 500px;">
       <%= yield %>
     </main>
+
     <!--Footer-->
     <footer class="container footer">
       <nav class="navbar d-flex">
         <ul>
-          <li>ABOUT US
+          <li>About us
           </li>
-          <li>SUPPORT</li>
-          <li>PRESS</li>
+          <li>Support</li>
+          <li>Press</li>
           <li>API</li>
-          <li>JOBS</li>
-          <li>PRIVACY</li>
-          <li>TERMS</li>
-          <li>DIRECTORY</li>
-          <li>PROFILES</li>
-          <li>HASHTAGS</li>
-          <li>LANGUAGE</li>
+          <li>Jobs</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li>Directory</li>
+          <li>Profiles</li>
+          <li>Hasgtags</li>
+          <li>Language</li>
         </ul>
-        <p> © 2018 INSTAGRAM </p>
+        <p> © 2019 Dante-Dev </p>
       </nav>
     </footer>
+  </body>
+</html>
   </body>
 </html>
